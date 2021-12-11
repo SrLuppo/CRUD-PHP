@@ -14,22 +14,11 @@ endif;
 $id = $_GET['txtid'] ?? 1;
 
 
-
-
 $sql = "SELECT * FROM pessoas where id = '$id' ";
 $resultado = mysqli_query($connect, $sql);
 $dados = mysqli_fetch_array($resultado);
 
 //var_dump($dados);
-
-
-
-
-
-
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -45,19 +34,12 @@ $dados = mysqli_fetch_array($resultado);
     <form action="index.php" method="get">
         <input type="text" name="txtid" id="txtid" ><br><br>
         <input type="submit" value="Pesquisar">
-
-
-
-
-
     </form>
     <hr>
     <?php
     echo $dados['nome']?? "". "<br>";
     echo $dados['profissao']??"";
-    ?>
-    
-    
+    ?>      
 
 
 
