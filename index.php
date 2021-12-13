@@ -4,10 +4,8 @@ $nome1 = "Adelano". "<br>" ;
 
 /*if (isset($_GET['txtid'])):
     $id = $_GET['txtid'];
-
 else:
     $id = 1;
-
 endif;
 */
 $id = $_GET['txtid'] ?? 1;
