@@ -1,7 +1,6 @@
 <?php
 require_once "db_connect.php";
 $nome1 = "Adelano". "<br>" ;
-$senha = "12345";
 
 
 /*if (isset($_GET['txtid'])):
