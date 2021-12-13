@@ -2,7 +2,8 @@
 require_once "db_connect.php";
 $nome1 = "Adelano". "<br>" ;
 $senha = "12345";
-//conexão de colsulta
+
+
 /*if (isset($_GET['txtid'])):
     $id = $_GET['txtid'];
 
