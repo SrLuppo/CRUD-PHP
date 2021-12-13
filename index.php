@@ -27,6 +27,7 @@ $dados = mysqli_fetch_array($resultado);
     <title>Document</title>
 </head>
 <body>
+    <?php include_once "menu.php" ?>
     <h1><?php echo $nome1?></h1>
     <form action="index.php" method="get">
         <input type="text" name="txtid" id="txtid" ><br><br>
