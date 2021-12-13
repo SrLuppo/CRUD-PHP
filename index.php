@@ -2,7 +2,6 @@
 require_once "db_connect.php";
 $nome1 = "Adelano". "<br>" ;
 
-
 /*if (isset($_GET['txtid'])):
     $id = $_GET['txtid'];
 
