@@ -6,7 +6,7 @@ require_once "db_connect.php";
 //$resultadoLista = mysqli_query($connect, $sqlLista);
 
 
-$id = $_GET ['id'];
+$id = $_GET['id'];
 $result_usuario = "DELETE FROM pessoas WHERE id='$id'";
 $resultado_usuario = mysqli_query($connect,$result_usuario);
 
