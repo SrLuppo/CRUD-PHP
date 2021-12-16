@@ -1,13 +1,15 @@
 <?php
+
 require_once "db_connect.php";
 
-$sqlLista = "SELECT * FROM pessoas";
-$resultadoLista = mysqli_query($connect, $sqlLista);
+//$sqlLista = "SELECT * FROM pessoas";
+//$resultadoLista = mysqli_query($connect, $sqlLista);
 
 
-$id = filter_input(INPUT_GET, 'nome', );
-$result_usuario = "DELETE FROM pessoas WHERE nome='$id'";
+$id = $_GET ['id'];
+$result_usuario = "DELETE FROM pessoas WHERE id='$id'";
 $resultado_usuario = mysqli_query($connect,$result_usuario);
+
 
 
 

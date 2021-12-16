@@ -51,7 +51,7 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                         echo "<td> " . $dados['peso'] . " </td>";
                         echo "<td> " . $dados['altura'] . " </td>";
                         echo "<td> " . $dados['nacionalidade'] . " </td>";
-                        echo "<td> " ."<a href='deleteLinha.php?id= " . $dados['nome'] ."'>Apagar</a>". " </td>";
+                        echo "<td> " ."<a href='deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
                     echo "</tr>";
                     endwhile;
                 ?>
