@@ -4,6 +4,12 @@ require_once "db_connect.php";
 $sqlLista = "SELECT * FROM pessoas";
 $resultadoLista = mysqli_query($connect, $sqlLista);
 
+//teste de delete
+/*$id = 
+$result_usuario = "DELETE FROM pessoas WHERE pessoas.id = 9;";
+$resultado_usuario = mysqli_query($connect,$result_usuario);
+*/
+
 
 
 ?>
@@ -45,6 +51,7 @@ $resultadoLista = mysqli_query($connect, $sqlLista);
                         echo "<td> " . $dados['peso'] . " </td>";
                         echo "<td> " . $dados['altura'] . " </td>";
                         echo "<td> " . $dados['nacionalidade'] . " </td>";
+                        echo "<td> " ."<a href='deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
                     echo "</tr>";
                     endwhile;
                 ?>
