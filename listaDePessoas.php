@@ -44,6 +44,7 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                 
             <?php
                  while  ($dados = mysqli_fetch_array($resultadoLista)):
+            
                     echo "<tr>";
                         echo "<td> " . $dados['nome'] . " </td>";
                         echo "<td> " . $dados['profissao'] . " </td>";
@@ -53,8 +54,30 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                         echo "<td> " . $dados['nacionalidade'] . " </td>";
                         echo "<td> " ."<a href='deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
                     echo "</tr>";
+                
                     endwhile;
                 ?>
+
+                <?php 
+                /*
+                 while  ($dados = mysqli_fetch_array($resultadoLista)):
+                    ?>
+                    <tr>
+                        <td>  <?php echo $dados['nome'] ?>             </td>
+                        <td>  <?php echo $dados['profissao'] ?>        </td>
+                        <td>  <?php echo $dados['nascimento'] ?>       </td>
+                        <td>  <?php echo $dados['peso'] ?>              </td>
+                        <td>  <?php echo $dados['altura'] ?>            </td>
+                        <td>  <?php echo $dados['nacionalidade'] ?>     </td>
+                        <td>   <a href='deleteLinha.php?id=<?php echo $dados['id'] ?>'>Apagar</a> </td>
+                
+                    </tr>
+
+                 <?php
+                    endwhile; 
+                    */
+                ?>
+        
                 
             
         </tbody>
