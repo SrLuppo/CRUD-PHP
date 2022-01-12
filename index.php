@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "db_connect.php";
 $nome1 = "Adelano". "<br>" ;
 
@@ -8,10 +9,10 @@ else:
     $id = 1;
 endif;
 */
-$id = $_GET['txtid'] ?? 1;
+$nome = $_GET['txtid'] ?? 1;
 
 
-$sql = "SELECT * FROM pessoas where id = '$id' ";
+$sql = "SELECT * FROM pessoas where nome LIKE '%$nome%' ";
 $resultado = mysqli_query($connect, $sql);
 $dados = mysqli_fetch_array($resultado);
 
@@ -36,6 +37,7 @@ $dados = mysqli_fetch_array($resultado);
     <hr>
     <?php
     echo $dados['nome']?? "". "<br>";
+    echo '<br>';
     echo $dados['profissao']??"";
     ?>      
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "db_connect.php";
 
 $sqlLista = "SELECT * FROM pessoas";
@@ -52,11 +53,11 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                         echo "<td> " . $dados['peso'] . " </td>";
                         echo "<td> " . $dados['altura'] . " </td>";
                         echo "<td> " . $dados['nacionalidade'] . " </td>";
-                        echo "<td> " ."<a href='deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
+                        echo "<td> " ."<a href='php_actions/deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
                     echo "</tr>";
                 
                     endwhile;
-                ?>
+                ?> 
 
                 <?php 
                 /*
@@ -83,7 +84,19 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
         </tbody>
     </table>
     
-
+<script>
+    
+    <?php 
+    if (isset($_SESSION['menssagem'])):
+        ?>
+       alert('<?php echo $_SESSION['menssagem'];?>')
+    <?php
+    endif;
+    session_unset();
+    session_destroy();
+     ?>
+</script>
     
 </body>
+
 </html>

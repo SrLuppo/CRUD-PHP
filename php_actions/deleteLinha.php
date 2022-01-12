@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-require_once "db_connect.php";
+require_once "../db_connect.php";
 
 //$sqlLista = "SELECT * FROM pessoas";
 //$resultadoLista = mysqli_query($connect, $sqlLista);
@@ -9,7 +10,7 @@ require_once "db_connect.php";
 $id = $_GET['id'];
 $result_usuario = "DELETE FROM pessoas WHERE id='$id'";
 $resultado_usuario = mysqli_query($connect,$result_usuario);
-header('Location: listaDePessoas.php');
+header('Location: ../listaDePessoas.php');
 
 
 
