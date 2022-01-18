@@ -37,6 +37,7 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                 <th>Peso</th>
                 <th>Altura</th>
                 <th>Nacionalidade</th>
+                <th>sexo</th>
             </tr>
         </thead>
         
@@ -45,6 +46,12 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                 
             <?php
                  while  ($dados = mysqli_fetch_array($resultadoLista)):
+                   /* if ($dados['sexo'] == 'M' ) {
+                        $sexo = 'Masculino';                        
+                    }else{
+                        $sexo = 'Feminino';
+                    }*/
+                    
             
                     echo "<tr>";
                         echo "<td> " . $dados['nome'] . " </td>";
@@ -53,7 +60,9 @@ $resultado_usuario = mysqli_query($connect,$result_usuario);
                         echo "<td> " . $dados['peso'] . " </td>";
                         echo "<td> " . $dados['altura'] . " </td>";
                         echo "<td> " . $dados['nacionalidade'] . " </td>";
+                        echo "<td> " . ($dados['sexo'] == 'M' ? 'Masculino': 'Feminino') . " </td>";              
                         echo "<td> " ."<a href='php_actions/deleteLinha.php?id=" . $dados['id'] ."'>Apagar</a>". " </td>";
+                        echo "<td> " ."<a href='editarPessoa.php?id=" . $dados['id'] ."'>Editar</a>". " </td>";
                     echo "</tr>";
                 
                     endwhile;
